@@ -1,0 +1,44 @@
+.drop-line-center {
+    position: absolute;
+    margin: auto;
+    width: 2px;
+    height: 220px;
+    overflow: hidden;  
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.drop-line-center::after {
+    content: "";
+    display: block;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    transform: translateY(0%);
+    animation: line-scroll 3s forwards infinite;
+}
+
+@keyframes line-scroll {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    60% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@media (max-width : 750px) {
+    .drop-line-center {
+        display: none;
+    }
+}

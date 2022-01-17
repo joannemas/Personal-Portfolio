@@ -1,0 +1,21 @@
+$pink: #E1A3FF;
+$orange: #FDB947;
+
+footer {
+    height: 150px;
+    padding: 20px 40%;
+    text-align: center;
+    font-family: lato;
+}
+
+footer img {
+    width: 40px;
+}
+
+@media (max-width : 750px) {
+
+    footer {
+        padding: 0;
+    }
+    
+}

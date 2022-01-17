@@ -1,0 +1,172 @@
+@import "variables";
+@import "nav";
+@import "footer";
+@import "title";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: lato;
+}
+body {
+    background: linear-gradient($pink, $orange);
+    overflow-x: hidden;
+}
+
+
+.contact__icon {
+    height: auto;
+    text-align: center;
+    margin: 0 50px;
+    
+
+    img {
+        max-height: 130px;
+    }
+}
+
+.contact__text {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: lato;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.icon__container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.contact-mail {
+    border: solid 5px;
+    padding: 50px;
+    font-size: 20px;
+    margin: 50px auto;
+    box-shadow: 20px -20px;
+    width: 80%;
+}
+
+.contacts {
+    margin-bottom: 100px;
+}
+
+$bg: #f3f8fa;
+$white: #fff;
+$black: #282936;
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+    transition: $property $duration $ease;
+  }
+  
+  .button {
+    font-family: 'Lato';
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    &.more-button {
+      width: 12rem;
+      height: auto;
+      margin: 20px 0;
+      .circle {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: $black;
+        border-radius: 1.625rem;
+        .icon {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          background: $white;
+          &.arrow {
+            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+            left: 0.625rem;
+            width: 1.125rem;
+            height: 0.125rem;
+            background: none;
+            &::before {
+              position: absolute;
+              content: '';
+              top: -0.25rem;
+              right: 0.0625rem;
+              width: 0.625rem;
+              height: 0.625rem;
+              border-top: 0.125rem solid #fff;
+              border-right: 0.125rem solid #fff;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+      .button-text {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.5rem 0;
+        margin: 0 0 0 4rem;
+        color: $black;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+        width: max-content;
+        font-family: lato;
+      }
+    }
+    &:hover {
+      .circle {
+        width: 130%;
+        .icon {
+          &.arrow {
+          background: $white;
+          transform: translate(1rem, 0);
+          }
+        }
+      }
+      .button-text {
+        color: $white;
+      }
+    }
+  }
+
+
+@media (max-width : 500px) {
+
+    .contact__icon {
+        margin: 0 20px;
+
+        img {
+            max-height: 150px;
+        }
+    }   
+
+    .contact-mail {
+        font-size: 18px;
+    }
+}

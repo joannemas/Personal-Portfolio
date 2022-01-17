@@ -52,14 +52,12 @@ h2 {
     flex-wrap: wrap;
   }
   
-  //Grid Container
   .cards {
     padding: 15px;
     display: flex;
     flex-flow: row wrap;
   }
   
-  //Cards
   .card {
     margin: 15px; 
     width: calc((100% / 3) - 30px);
@@ -69,7 +67,6 @@ h2 {
         max-width: 100px;
     }
   
-    //media queries for stacking cards
     @media screen and (max-width: 991px) {
       width: calc((100% / 2) - 30px);
     }
@@ -110,7 +107,7 @@ h2 {
       }
     }
   
-    //Expander
+    //Fenêtre
     &__expander {
       transition: all 0.2s ease-in-out;
       width: 100%;
@@ -174,9 +171,8 @@ h2 {
           border-bottom: 15px solid #333a45;
         }
         
-        //folder open icon
         .fa:before {
-          content: "\f115";
+          content: "";
         }
       }
   
@@ -215,9 +211,6 @@ h2 {
   }
   
   
-  //Expander Widths
-  
-  //when 3 cards in a row
   @media screen and (min-width: 992px) {
   
     .card:nth-of-type(3n+2) .card__expander {
@@ -234,8 +227,7 @@ h2 {
     }
   
   }
-  
-  //when 2 cards in a row
+
   @media screen and (min-width: 768px) and (max-width: 991px) {
   
     .card:nth-of-type(2n+2) .card__expander {

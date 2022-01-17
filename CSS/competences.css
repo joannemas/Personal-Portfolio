@@ -430,7 +430,7 @@ h2 {
   border-bottom: 15px solid #333a45;
 }
 .card.is-expanded .card__inner .fa:before {
-  content: "\f115";
+  content: "";
 }
 .card.is-expanded .card__expander {
   max-height: 1000px;

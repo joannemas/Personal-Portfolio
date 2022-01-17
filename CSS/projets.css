@@ -298,6 +298,10 @@ h1 {
   font-family: sans-serif;
 }
 
+.roller {
+  width: 115%;
+}
+
 .project-list {
   display: grid;
   grid-template-columns: 1fr 1fr;

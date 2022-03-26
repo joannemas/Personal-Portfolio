@@ -319,6 +319,46 @@ h1 {
   margin: 75px auto;
 }
 
+.link_project {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.link_project a {
+  display: block;
+  width: 80px;
+  height: 35px;
+  line-height: 40px;
+  font-size: 14px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  border: #000 2px solid;
+}
+.link_project a span {
+  position: relative;
+  z-index: 2;
+}
+.link_project a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #000;
+  transition: all 0.35s;
+}
+.link_project a:hover {
+  color: #fff;
+}
+.link_project a:hover:after {
+  width: 100%;
+}
+
 .project {
   display: flex;
   flex-direction: column;

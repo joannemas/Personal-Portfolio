@@ -477,5 +477,14 @@ h1 {
     min-height: 300px;
   }
 }
+@media (max-width: 640px) {
+  .smartphone {
+    flex-direction: row;
+  }
+  .smartphone .meta {
+    min-width: 35%;
+    height: auto;
+  }
+}
 
 /*# sourceMappingURL=projets.css.map */

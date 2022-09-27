@@ -210,3 +210,16 @@ h1 {
     min-height: 300px;
   }
 }
+
+@media (max-width: 640px) {
+
+  .smartphone {
+
+    flex-direction: row;
+    .meta {
+      min-width: 35%;
+      height: auto;
+    }
+    
+  }
+}
